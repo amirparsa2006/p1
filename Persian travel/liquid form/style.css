@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #dac9c9;
+}
+
+.container {
+    position: relative;
+}
+
+.container .drop {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 520px;
+    height: 520px;
+    box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05),
+    25px 35px 20px rgba(0, 0, 0, 0.05),
+    25px 30px 30px rgba(0, 0, 0, 0.05),
+    inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+    transition: 0.5s;
+    border-radius: 45% 51% 28% 72% / 39% 41% 59% 66% ;
+}
+
+.container .drop:hover {
+    border-radius: 50%;
+}
+
+.container .drop:before {
+    content: '';
+    position: absolute;
+    top: 75px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.8;
+}
+.container .drop:after {
+    content: '';
+    position: absolute;
+    top: 125px;
+    left: 140px;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.6;
+}
+
+.container .drop .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.container .drop .content h2{
+    color: #573333;
+    font-size: 1.8em;
+}
+
+.container .drop .content form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .drop .content form .inputBox {
+    position: relative;
+    width: 260px;
+    box-shadow: inset 1px 4px 8px rgba(0, 0, 0, 0.08),
+                inset -1px -5px 10px rgba(255, 255, 255, 1),
+                10px 10px 10px rgba(0, 0, 0, 0.05),
+                15px 10px 15px rgba(0, 0, 0, 0.025);
+    border-radius: 25px;
+}
+
+.container .drop .content form .inputBox input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 15px;
+}
+
+.container .drop .content form .inputBox:before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.197);
+    border-radius: 15px;
+    opacity: 0.65;
+}
+
+.container .drop .content form .inputBox input[type="submit"] {
+    color: #fff;
+    font-size: 1.1em;
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.container .drop .content form .inputBox:last-child {
+    width: 170px;
+    background-color: #1e00ff;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.1),
+                15px 15px 10px rgba(0, 0, 0, 0.05),
+                15px 10px 15px rgba(0, 0, 0, 0.025);
+    transition: 0.5s;
+}
+
+.container .drop .content form .inputBox:last-child:hover {
+    width: 100%;
+}
+
+.btns {
+    position: absolute;
+    right: -200px;
+    bottom: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #0e15d7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    line-height: 1.2em;
+    letter-spacing: 0.1em;
+    font-size: 1em;
+    text-align: center;
+    box-shadow: inset 10px 10px 10px rgba(190, 1, 254, 0.05),
+                15px 25px 10px rgba(190, 1, 254, 0.1),
+                15px 10px 20px rgba(190, 1, 254, 0.1),
+                inset -10px -10px 15px rgba(255, 255, 255, 0.5);
+                border-radius: 46% 54% 73% 27% / 56% 53% 47% 44% ;
+    transition: 0.25s;
+}
+
+.btns:hover {
+    border-radius: 50%;
+}
+
+.btns::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: 32px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.2;
+}
+
+.btns.signup {
+    bottom: 200px;
+    right: -130px;
+    width: 90px;
+    height: 90px;
+    font-size: 0.9em;
+    background-color: #00ff80;
+    border-radius: 46% 54% 32% 68% / 46% 53% 47% 54% ;
+}
+
+.btns.signup:hover {
+    border-radius: 50%;
+}
+
+.btns.signup:before {
+    top: 13px;
+    left: 18px;
+    width: 15px;
+    height: 15px;
+}
